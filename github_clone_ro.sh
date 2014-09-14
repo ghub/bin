@@ -1,3 +1,3 @@
 #!/bin/sh -e
 
-git clone https://github.com/$@.git
+git clone https://github.com/$1.git
