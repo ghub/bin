@@ -1,3 +1,3 @@
 #!/bin/sh -e
 
-find * -name "*.h" | xargs dirname | sort -u > .includes
+find * -name "*.h" -o -name "*.moc" | xargs dirname | sort -u > .includes
