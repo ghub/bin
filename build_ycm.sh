@@ -1,3 +1,3 @@
 #!/bin/sh -e
 
-~/.vim/bundle/YouCompleteMe/third_party/ycmd/build.sh --clang-completer --system-libclang
+~/.vim/bundle/YouCompleteMe/install.sh --clang-completer --system-libclang
