@@ -1,8 +1,11 @@
 #!/bin/sh -e
 
 (
-find * -name "*.h" -o -name "*.moc" | xargs dirname
-find * -name include
+for each in "$@"; do
+    find $each -type f -name "*.h" -o -name "*.moc" | xargs dirname
+    find $each -type d -name include
+done
 ) |
 grep -Evw "arm|win" |
-sort -u > .includes
+sed -e "s|^\./||" |
+sort -u
