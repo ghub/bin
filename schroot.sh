@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-git_root=$( git_root.sh )
+git_root=$( git_root.sh 2>/dev/null )
 
 if [ -f .schrootrc ]; then
     name=$( cat .schrootrc )
