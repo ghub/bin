@@ -1,16 +1,14 @@
 #!/bin/sh -e
 
-read_resource()
-{
-    grep -w ^$1 .make | sed -e "s/^$1=//"
-}
-
-TOOL=$( read_resource TOOL )
-
-prj=$( pwd )
 dir=$( dirname $1 )
-tool=${TOOL:-make}
-
 shift
+
+cmd=make
+
+cfg_file=.makerc
+if [ -r $cfg_file ]; then
+    cmd=$( cat $cfg_file )
+fi
+
 cd $dir
-$tool $@
+$cmd $@
