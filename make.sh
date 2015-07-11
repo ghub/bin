@@ -11,4 +11,5 @@ if [ -r $cfg_file ]; then
 fi
 
 cd $dir
+echo make.sh: Entering directory \'$( pwd )\'
 $cmd $@
