@@ -15,7 +15,9 @@ get_cmd()
 dir=$( dirname $1 )
 shift
 
+cmd=$( get_cmd )
+
 cd $dir
 echo makesh: Entering directory \'$( pwd )\'
 
-$( get_cmd ) "$@"
+$cmd "$@"
