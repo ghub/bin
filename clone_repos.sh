@@ -8,3 +8,4 @@ github_clone_ro.sh krzysztof-jusiak/gmock
 github_clone_ro.sh rupa/z
 github_clone_ro.sh sjl/peat
 github_clone_ro.sh sjl/t
+github_clone_ro.sh tomislav/osx-terminal.app-colors-solarized
