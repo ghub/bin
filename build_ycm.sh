@@ -1,3 +1,3 @@
 #!/bin/sh -e
 
-~/.vim/bundle/YouCompleteMe/install.sh --clang-completer --system-libclang
+~/.vim/bundle/YouCompleteMe/install.py --clang-completer --system-libclang
