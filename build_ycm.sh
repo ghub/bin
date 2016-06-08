@@ -1,6 +1,6 @@
 #!/bin/sh -e
 
-cmd="~/.vim/bundle/YouCompleteMe/install.py --clang-completer"
+cmd="$HOME/.vim/bundle/YouCompleteMe/install.py --clang-completer"
 
 if [ $( uname -s ) = Darwin ]; then
     $cmd
