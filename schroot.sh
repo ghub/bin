@@ -1,18 +1,16 @@
 #!/bin/sh -e
 
-git_root=$( git_root.sh 2>/dev/null || true )
+chroot_name=$( schroot_chroot_name.sh )
+session_name=$( schroot_session_name.sh )
+pre=$( schroot_pre.sh )
 
-if [ -f .schrootrc ]; then
-    name=$( cat .schrootrc )
-elif [ -f $git_root/.schrootrc ]; then
-    name=$( cat $git_root/.schrootrc )
-elif [ -f ~/.schrootrc ]; then
-    name=$( cat ~/.schrootrc )
+if [ $# -gt 0 ]; then
+    cmd="exec $@"
 else
-    name=default
+    cmd="exec bash"
 fi
 
-schroot --list --all-sessions | grep -qw "session:$name" ||
-schroot --begin-session --chroot $name --session-name $name
+schroot --list --all-sessions | grep -qw $session_name ||
+schroot --begin-session --chroot $chroot_name --session-name $session_name
 
-schroot --run-session --chroot $name "$@"
+exec schroot --run-session --chroot $session_name -- bash -c "$pre && $cmd"
