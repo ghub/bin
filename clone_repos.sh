@@ -1,5 +1,6 @@
 #!/bin/sh -e
 
+mkdir ~/.vim/bundle
 cd ~/repo
 
 github_clone_ro.sh apitrace/apitrace
