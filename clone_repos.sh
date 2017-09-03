@@ -1,6 +1,5 @@
 #!/bin/sh -e
 
-mkdir ~/.vim/bundle
 cd ~/repo
 
 github_clone_ro.sh apitrace/apitrace
@@ -12,4 +11,5 @@ github_clone_ro.sh patriciogonzalezvivo/glslViewer
 github_clone_ro.sh rupa/z
 github_clone_ro.sh sjl/peat
 github_clone_ro.sh sjl/t
+github_clone_ro.sh tmux-plugins/tpm ~/.tmux/plugins/tpm
 github_clone_ro.sh tomislav/osx-terminal.app-colors-solarized
