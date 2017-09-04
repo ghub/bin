@@ -3,6 +3,7 @@
 cd ~/repo
 
 github_clone_ro.sh apitrace/apitrace
+github_clone_ro.sh ds26gte/scmindent
 github_clone_ro.sh gittup/tup
 github_clone_ro.sh gmarik/Vundle.vim ~/.vim/bundle/Vundle.vim
 github_clone_ro.sh KhronosGroup/glslang
