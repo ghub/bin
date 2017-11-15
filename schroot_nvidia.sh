@@ -11,4 +11,5 @@
     --no-nvidia-modprobe \
     --no-precompiled-interface \
     --no-x-check \
+    --ui=none \
 
