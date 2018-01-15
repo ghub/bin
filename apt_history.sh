@@ -1,4 +1,4 @@
-##!/bin/sh -e
+#!/bin/sh -e
 
 apt_log_dir=/var/log/apt
 
