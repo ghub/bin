@@ -4,9 +4,6 @@
     --accept-license \
     --expert \
     --no-distro-scripts \
-    --no-glvnd-egl-client \
-    --no-glvnd-glx-client \
-    --no-install-libglvnd \
     --no-kernel-module \
     --no-kernel-module-source \
     --no-nvidia-modprobe \
