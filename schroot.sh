@@ -11,11 +11,7 @@ else
     cmd="exec bash"
 fi
 
-schroot --list --all-sessions | grep -qw $session_name
-if [ $? -ne 0 ]; then
-    schroot --begin-session --chroot $chroot_name --session-name $base_session_name
-else
-    schroot --recover-session --chroot $session_name
-fi
+schroot --list --all-sessions | grep -qw $session_name ||
+schroot --begin-session --chroot $chroot_name --session-name $base_session_name
 
 exec schroot --run-session --chroot $session_name -- bash -c "$pre && $cmd"
